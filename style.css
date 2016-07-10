@@ -1,0 +1,56 @@
+p {
+    width: 500px;
+}
+.highlightMenu {
+    position: absolute;
+    display: none;
+    z-index: 100;
+    background-color: #262625;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+.highlightMenu.highlightMenu--active {
+    display: inline-block;
+}
+.highlightMenu .highlightMenu-arrowClip {
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    clip: rect(10px 20px 20px 0);
+    margin-left: -10px;
+}
+.highlightMenu .highlightMenu-arrowClip .highlightMenu-arrow {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #262625;
+    transform: rotate(45deg) scale(.5);
+}
+ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -o-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+ul li:not(:last-child) {
+    padding-right: 3px;
+}
+ul li:not(:last-child)::after {
+    content: "|";
+    padding-left: 3px;
+}
